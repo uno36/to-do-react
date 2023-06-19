@@ -1,0 +1,1 @@
+{"version":3,"file":"styles.css","mappings":"AAAA;EACE,YAAY;AACd,C","sources":["webpack://todoapp/./src/styles/index.css"],"sourcesContent":["h1 {\n  color: green;\n}"],"names":[],"sourceRoot":""}
