@@ -22,11 +22,7 @@ const Navbar = () => {
   const ref = useRef();
   useEffect(() => {
     const handler = (event) => {
-      if (
-        navbarOpen
-        && ref.current
-        && !ref.current.contains(event.target)
-      ) {
+      if (navbarOpen && ref.current && !ref.current.contains(event.target)) {
         setNavbarOpen(false);
       }
     };
@@ -35,6 +31,11 @@ const Navbar = () => {
       document.removeEventListener('mousedown', handler);
     };
   }, [navbarOpen]);
+
+  const handleClick = () => {
+    setNavbarOpen(false);
+    navigate('/login'); // Navigate to the login page
+  };
 
   return (
     <div>
@@ -58,10 +59,13 @@ const Navbar = () => {
         <ul className={`menu-nav${navbarOpen ? ' show-menu' : ''}`}>
           {links.map((link) => (
             <li key={link.text}>
-              {(link.path === '/login' && !user) || (link.path === '/profile' && user) ? (
+              {(link.path === '/login' && user) || (link.path === '/profile' && user) ? (
                 <span>{link.text}</span>
               ) : (
-                <NavLink to={link.path} onClick={() => setNavbarOpen(false)}>
+                <NavLink
+                  to={link.path}
+                  onClick={link.path === '/login' ? handleClick : () => setNavbarOpen(false)}
+                >
                   {link.text}
                 </NavLink>
               )}

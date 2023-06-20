@@ -1,5 +1,275 @@
-h1 {
-  color: green;
+.wrapper {
+  width: 100%;
+  padding: 8rem 20px 3rem;
 }
+
+.todos {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.form-container {
+  display: flex;
+  border-radius: calc(0.1 * 100px);
+  box-shadow: 0 4px 14px 0 rgba(70, 70, 70, 0.38);
+  justify-content: space-around;
+  background: #fff;
+  font-size: 1rem;
+}
+
+.input-text {
+  width: 85%;
+  padding-right: 5px;
+  padding-left: 10px;
+  border-radius: calc(0.5 * 100px);
+  font-size: 1rem;
+}
+
+.input-text::placeholder {
+  color: #000;
+}
+
+.input-submit {
+  background: transparent;
+  color: #5b5b5b;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-weight: 600;
+  margin-right: 10px;
+}
+
+.input-text,
+.input-submit {
+  height: 45px;
+  outline: none;
+  border: none;
+}
+
+.submit-warning {
+  font-size: 15px;
+  color: red;
+  margin-top: 5px;
+  display: block;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.input-submit svg {
+  color: #5e5e5e;
+  font-size: 20px;
+  margin-top: 2px;
+}
+
+a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Active route */
+.active {
+  color: #005bb3;
+}
+
+.about {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.about_list {
+  list-style: none;
+}
+
+.about_list a {
+  padding: 20px 0;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.menu-nav li a,
+.menu-nav li span {
+  display: block;
+  padding: 1rem;
+}
+
+.about_list a:hover {
+  color: #005bb3;
+}
+
+.main_content {
+  max-width: 650px;
+}
+
+.navbar {
+  position: relative;
+}
+
+button {
+  cursor: pointer;
+  background: transparent;
+  border: none;
+  font-size: 20px;
+}
+
+.navbar .toggle {
+  position: fixed;
+  left: 30px;
+  top: 40px;
+  cursor: pointer;
+  background: transparent;
+  border: none;
+}
+
+.menu-nav {
+  list-style: none;
+  position: absolute;
+  background: #fff;
+  left: 0;
+  width: 0;
+  overflow: hidden;
+  max-width: 290px;
+  z-index: 9;
+  font-size: 18px;
+  box-shadow: 0 10px 15px -3px rgb(46 41 51 / 8%), 0 4px 6px -2px rgb(71 63 79 / 16%);
+  transform: translateX(-100px);
+  transition: transform ease-in-out 0.2s;
+
+  /* transition: width ease 0.2s; */
+}
+
+.menu-nav.show-menu {
+  width: 100%;
+  transform: translateX(0);
+}
+
+.log-in {
+  color: #777;
+  border-top: 1px solid #efecec;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+/* logout */
+.logout {
+  position: absolute;
+  right: 30px;
+  top: 40px;
+  display: flex;
+  gap: 2rem;
+  font-size: 20px;
+  color: #005bb3;
+}
+
+.fu5wPeEeY19JO5Ykvtt9 h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1em;
+  text-transform: lowercase;
+  text-align: center;
+}
+
+.ONmz5_d_w6IeGyLNEhcG {
+  font-size: 1rem;
+  list-style-type: none;
+  padding: 14px 25px;
+  border-bottom: 1px solid #fff;
+  background: #f0efef;
+  margin-left: -40px;
+  border-radius: 8px;
+  padding-right: 50px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.FQanXz3YnJyW2tg9cJDy {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.FQanXz3YnJyW2tg9cJDy span {
+  flex: 1;
+  order: 1;
+}
+
+.FQanXz3YnJyW2tg9cJDy button {
+  cursor: pointer;
+  background: transparent;
+  order: 2;
+  outline: none;
+  border: none;
+  margin-left: 10px;
+}
+
+.PbC4Ve9xAsP0_RTwZiNF {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.g87aSzlOJ4aw7p1GIahF {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #dfdfdf;
+  outline: none;
+}
+
+.eIbSrWeZFc1tF1YWPmlJ {
+  text-decoration: line-through;
+  color: #aeadad;
+}
+
+.IXf9fWIwjisTdIpO_Xnn {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  cursor: pointer;
+}
+
+.TBsYm_vFDpXTNNqsGVII {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.Vu8MyhXA60MckH4yw5_c {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mZl7tJyoMnDB5vHATBe0 {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  box-shadow: rgb(32 32 32 / 8%) 0 10px 32px 0;
+  padding: 40px;
+}
+
+.mZl7tJyoMnDB5vHATBe0 input {
+  height: 50px;
+  width: 100%;
+  padding: 10px 20px;
+  font-size: 15px;
+  margin-bottom: 10px;
+  outline: none;
+  border-radius: 2px;
+  border: 1px solid rgb(209, 215, 217);
+}
+
+.mZl7tJyoMnDB5vHATBe0 button {
+  border-radius: 2px;
+  border: none;
+  background-color: #758488;
+  font-size: 18px;
+  width: 100%;
+  height: 50px;
+  color: rgb(255, 255, 255);
+  text-transform: uppercase;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
 
 /*# sourceMappingURL=styles.css.map*/
