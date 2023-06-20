@@ -2,11 +2,13 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { FaTrash } from 'react-icons/fa';
 import { AiFillEdit } from 'react-icons/ai';
+import { useAuthContext } from '../context/AuthContext';
 import styles from '../styles/TodoItem.module.css';
 
 const TodoItem = ({ itemProp, setTodos, delTodo }) => {
   const [editing, setEditing] = useState(false);
   const [textClicked, setTextClicked] = useState(false);
+  const { user } = useAuthContext();
 
   const handleChange = () => {
     setTodos((prevState) => prevState.map((todo) => {
@@ -36,13 +38,8 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
     }));
   };
 
-  const viewMode = {};
-  const editMode = {};
-  if (editing) {
-    viewMode.display = 'none';
-  } else {
-    editMode.display = 'none';
-  }
+  const viewMode = editing ? { display: 'none' } : {};
+  const editMode = editing ? {} : { display: 'none' };
 
   const handleUpdatedDone = (event) => {
     if (event.key === 'Enter') {
@@ -64,7 +61,9 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
   return (
     <li className={styles.item}>
       <div
-        className={`${styles.content} ${itemProp.completed && styles.completed}`}
+        className={`${styles.content} ${
+          itemProp.completed ? styles.completed : ''
+        }`}
         style={viewMode}
       >
         <input
@@ -72,13 +71,17 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
           checked={itemProp.completed}
           onChange={handleChange}
         />
-        <button
-          type="button"
-          onClick={handleEditing}
-          className={styles.editButton}
-        >
-          <AiFillEdit style={{ color: '#5e5e5e', fontSize: '20px' }} />
-        </button>
+        {user && (
+          <>
+            <button
+              type="button"
+              onClick={handleEditing}
+              className={styles.editButton}
+            >
+              <AiFillEdit style={{ color: '#5e5e5e', fontSize: '20px' }} />
+            </button>
+          </>
+        )}
         <button
           type="button"
           onClick={() => delTodo(itemProp.id)}
@@ -87,7 +90,7 @@ const TodoItem = ({ itemProp, setTodos, delTodo }) => {
           <FaTrash style={{ color: '#5e5e5e', fontSize: '16px' }} />
         </button>
         <field
-          className={`${styles.title} ${textClicked && styles.overflow}`}
+          className={`${styles.title} ${textClicked ? styles.overflow : ''}`}
           onClick={handleTextClick}
           onKeyDown={handleTextKeyDown}
           tabIndex={0} // Make the div focusable for keyboard events

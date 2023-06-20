@@ -1,3 +1,5 @@
+import React from 'react';
+import PropTypes from 'prop-types';
 import styles from '../styles/Header.module.css';
 
 const headerStyle = {
@@ -7,11 +9,14 @@ const headerStyle = {
   textAlign: 'center',
 };
 
-const Header = () => (
+const Header = ({ children }) => (
   <header style={headerStyle} className={styles.header}>
-    <h1>todos</h1>
-    <p>Items will persist in the browser local storage</p>
+    {children}
   </header>
 );
+
+Header.propTypes = {
+  children: PropTypes.node.isRequired,
+};
 
 export default Header;
