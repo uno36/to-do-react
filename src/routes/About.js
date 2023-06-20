@@ -3,9 +3,7 @@ import Header from '../components/Header';
 
 const About = () => (
   <>
-    <Header>
-      <h1>About page.</h1>
-    </Header>
+    <h1 className="about-heading">About us.</h1>
     <div className="about">
       <ul className="about_list">
         <li>

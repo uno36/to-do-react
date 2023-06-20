@@ -69,20 +69,24 @@ a {
   color: #005bb3;
 }
 
+.about-heading {
+  text-align: center;
+}
+
 .about {
-  max-width: 1000px;
   margin: 0 auto;
 }
 
 .about_list {
   list-style: none;
+  display: flex;
+  gap: 20px;
 }
 
 .about_list a {
-  padding: 20px 0;
-  display: inline-block;
   text-decoration: none;
   font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .menu-nav li a,
@@ -95,8 +99,17 @@ a {
   color: #005bb3;
 }
 
+.about-title,
+.about-description {
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+}
+
 .main_content {
-  max-width: 650px;
+  max-width: 70%;
 }
 
 .navbar {
@@ -146,10 +159,6 @@ button {
   border-top: 1px solid #efecec;
   margin-top: 15px;
   font-size: 15px;
-}
-
-.log-in-link {
-  cursor: pointer;
 }
 
 /* logout */

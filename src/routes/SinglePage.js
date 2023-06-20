@@ -5,13 +5,13 @@ const aboutData = [
     slug: 'about-app',
     title: 'About the app',
     description:
-        "This application lets us add to-dos, edit, and delete items. Log in to see the delete feature. It also persists to-dos in the browser's local storage for a subsequent visit.",
+        "The todo app is a versatile application that enables users to efficiently manage their tasks. With a user-friendly interface, it allows users to add, edit, and delete todo items effortlessly. By logging in, users gain access to additional features, such as the ability to delete tasks. Moreover, the app ensures data persistence by utilizing the browser's local storage, enabling users to revisit their todos even after closing the application. With its simplicity and practicality, the todo app offers an effective solution for organizing and tracking tasks, helping users stay productive and focused on their goals.",
   },
   {
     slug: 'about-developer',
     title: 'About the developer',
     description:
-        'Ibas Majid founded ibaslogic.com to experiment with new web features and write actionable guides. Follow Ibas on Twitter @ibaslogic to learn modern web development.',
+        'Emmanuel Tofa is a passionate web developer who specializes in creating innovative applications. With a keen interest in exploring new web technologies, he constantly experiments and integrates cutting-edge features into his projects. Additionally, Emmanuel shares his knowledge and expertise by providing insightful guides that offer practical insights and actionable steps for fellow developers.',
   },
 ];
 
@@ -21,8 +21,8 @@ const SinglePage = () => {
   const { title, description } = aboutContent;
   return (
     <div className="main_content">
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <h2 className="about-title">{title}</h2>
+      <p className="about-description">{description}</p>
     </div>
   );
 };
